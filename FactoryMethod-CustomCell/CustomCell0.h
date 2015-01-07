@@ -10,4 +10,7 @@
 
 @interface CustomCell0 : CustomCell
 
+@property (weak, nonatomic) IBOutlet UILabel *_mHeadlineLabel;
+@property (nonatomic, strong) IBOutlet UILabel *_mSubHeadLabel;
+
 @end

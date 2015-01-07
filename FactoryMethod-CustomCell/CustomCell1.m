@@ -18,5 +18,11 @@
 }
 */
 
-
+- (instancetype)initWithClassName {
+    self._mImageView.image = [UIImage imageNamed:@"landscape-mountain.jpg"];
+    self._mHeadlineLabel.text = NSStringFromClass([self class]);
+    self._mSubheadLabel.text = @"This is an image type of object.";
+    
+    return self;
+}
 @end

@@ -19,6 +19,7 @@
 		A2087FFB1A5C829E00F606FA /* CustomCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = A2087FFA1A5C829E00F606FA /* CustomCell1.m */; };
 		A2087FFE1A5C82AB00F606FA /* CustomCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = A2087FFD1A5C82AB00F606FA /* CustomCell2.m */; };
 		A20880011A5C831F00F606FA /* CustomCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A20880001A5C831F00F606FA /* CustomCellFactory.m */; };
+		A2BEF1671A5DE021009E374E /* landscape-mountain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2BEF1661A5DE021009E374E /* landscape-mountain.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		A2087FFD1A5C82AB00F606FA /* CustomCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell2.m; sourceTree = "<group>"; };
 		A2087FFF1A5C831F00F606FA /* CustomCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellFactory.h; sourceTree = "<group>"; };
 		A20880001A5C831F00F606FA /* CustomCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellFactory.m; sourceTree = "<group>"; };
+		A2BEF1661A5DE021009E374E /* landscape-mountain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "landscape-mountain.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,10 @@
 				A2087FCD1A5C774A00F606FA /* AppDelegate.h */,
 				A2087FCE1A5C774A00F606FA /* AppDelegate.m */,
 				A2087FF21A5C797100F606FA /* CustomCells */,
-				A2087FD01A5C774A00F606FA /* ViewController.h */,
-				A2087FD11A5C774A00F606FA /* ViewController.m */,
+				A2BEF1681A5DE830009E374E /* Controllers */,
 				A2087FD31A5C774A00F606FA /* Main.storyboard */,
 				A2087FD61A5C774A00F606FA /* Images.xcassets */,
+				A2BEF1661A5DE021009E374E /* landscape-mountain.jpg */,
 				A2087FD81A5C774A00F606FA /* LaunchScreen.xib */,
 				A2087FC91A5C774A00F606FA /* Supporting Files */,
 			);
@@ -150,6 +152,15 @@
 				A2087FFD1A5C82AB00F606FA /* CustomCell2.m */,
 			);
 			name = CustomCells;
+			sourceTree = "<group>";
+		};
+		A2BEF1681A5DE830009E374E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2087FD01A5C774A00F606FA /* ViewController.h */,
+				A2087FD11A5C774A00F606FA /* ViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BEF1671A5DE021009E374E /* landscape-mountain.jpg in Resources */,
 				A2087FD51A5C774A00F606FA /* Main.storyboard in Resources */,
 				A2087FDA1A5C774A00F606FA /* LaunchScreen.xib in Resources */,
 				A2087FD71A5C774A00F606FA /* Images.xcassets in Resources */,
@@ -450,6 +462,7 @@
 				A2087FEB1A5C774A00F606FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2087FEC1A5C774A00F606FA /* Build configuration list for PBXNativeTarget "FactoryMethod-CustomCellTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +471,7 @@
 				A2087FEE1A5C774A00F606FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

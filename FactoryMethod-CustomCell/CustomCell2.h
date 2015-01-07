@@ -8,6 +8,11 @@
 
 #import "CustomCell.h"
 
-@interface CustomCell2 : CustomCell
+@interface CustomCell2 : CustomCell <UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *_mHeadlineLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *_mWebView;
+@property (weak, nonatomic) IBOutlet UILabel *_mSubheaderLabel;
+
 
 @end

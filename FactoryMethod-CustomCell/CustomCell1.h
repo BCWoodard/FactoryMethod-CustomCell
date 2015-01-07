@@ -10,4 +10,8 @@
 
 @interface CustomCell1 : CustomCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *_mImageView;
+@property (weak, nonatomic) IBOutlet UILabel *_mHeadlineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *_mSubheadLabel;
+
 @end

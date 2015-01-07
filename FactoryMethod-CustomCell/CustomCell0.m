@@ -18,4 +18,11 @@
 }
 */
 
+- (instancetype)initWithClassName {
+    self._mHeadlineLabel.text = NSStringFromClass([self class]);
+    self._mSubHeadLabel.text = @"This is a text type of object.";
+    
+    return self;
+}
+
 @end

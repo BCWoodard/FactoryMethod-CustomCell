@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "CustomCellFactory.h"
 
+#define kCustomCell0 @"CustomCell0"
+
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
@@ -25,16 +27,15 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return 170;
+    return 240.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,7 +45,7 @@
     
     UITableViewCell *cell = nil;
     
-    switch (indexPath.section) {
+    switch (indexPath.row) {
         case 0:
             cell = [[factory cellForKey:@"CustomCell0" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;

@@ -19,13 +19,19 @@
     
     self = [super init];
     
+    
     if (self) {
-        self.textLabel.text = NSStringFromClass([self class]);
+        if ([NSStringFromClass([self class]) isEqualToString:@"CustomCell0"]) {
+            self.textLabel.text = NSStringFromClass([self class]);
+            self.detailTextLabel.text = @"This is some random text";
+        } else
+          
+        self.textLabel.text = @"A different class";
+        //self.textLabel.text = NSStringFromClass([self class]);
     }
     
     return self;
 }
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
