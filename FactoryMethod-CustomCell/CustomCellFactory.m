@@ -17,19 +17,21 @@
     return [[[self class] alloc] init];
 }
 
-- (CustomCell *)cellForKey:(NSString *)cellKey {
+- (CustomCell *)cellForKey:(NSString *)cellKey fromTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath {
     
-    CustomCell *customCell = nil;
+    NSString *identifier = nil;
     
     if ([cellKey isEqualToString:@"CustomCell0"]) {
-        customCell = [[CustomCell0 alloc] init];
+        identifier = @"CustomCell0";
     } else if ([cellKey isEqualToString:@"CustomCell1"]) {
-        customCell = [[CustomCell1 alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CustomCell1"];
+        identifier = @"CustomCell1";
     } else if ([cellKey isEqualToString:@"CustomCell2"]) {
-        customCell = [[CustomCell2 alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"CustomCell2"];
+        identifier = @"CustomCell2";
     } else {
         NSAssert(NO, @"No custom cell found for cellKey %@", cellKey);
     }
+    
+    CustomCell *customCell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
     
     return customCell;
 }

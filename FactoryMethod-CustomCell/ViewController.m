@@ -31,6 +31,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     // Implement the cell factory
@@ -40,13 +42,13 @@
     
     switch (indexPath.section) {
         case 0:
-            cell = [[factory cellForKey:@"CustomCell0"] initWithClassName];
+            cell = [[factory cellForKey:@"CustomCell0" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;
         case 1:
-            cell = [[factory cellForKey:@"CustomCell1"] initWithClassName];
+            cell = [[factory cellForKey:@"CustomCell1" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;
         case 2:
-            cell = [[factory cellForKey:@"CustomCell2"] initWithClassName];
+            cell = [[factory cellForKey:@"CustomCell2" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;
         default:
             break;

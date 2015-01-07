@@ -12,6 +12,6 @@
 @interface CustomCellFactory : NSObject
 
 + (CustomCellFactory *)factory;
-- (CustomCell *)cellForKey:(NSString *)cellKey;
+- (CustomCell *)cellForKey:(NSString *)cellKey fromTableView:(UITableView *)tableView forIndexPath:(NSIndexPath *)indexPath;
 
 @end
