@@ -14,20 +14,13 @@
     // Initialization code
 }
 
-//- (NSString *)setTextLabel {
-//    return nil;
-//}
-//
-//- (NSString *)cellLabelFromClassName {
-//    return [NSStringFromClass([self class]) lowercaseString];
-//}
 
 - (instancetype)initWithClassName {
     
     self = [super init];
     
     if (self) {
-        self.textLabel.text = [NSStringFromClass([self class]) lowercaseString];
+        self.textLabel.text = NSStringFromClass([self class]);
     }
     
     return self;

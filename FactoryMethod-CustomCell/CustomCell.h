@@ -12,7 +12,4 @@
 
 - (instancetype)initWithClassName;
 
-//- (NSString *)setTextLabel;
-//- (NSString *)cellLabelFromClassName;
-
 @end
