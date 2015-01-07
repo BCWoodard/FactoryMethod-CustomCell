@@ -20,8 +20,8 @@
 
 - (instancetype)initWithClassName {
     self._mHeadlineLabel.text = NSStringFromClass([self class]);
-    [self._mWebView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://static2.lxdcdn.net/images/6bd09c48e6ad87acecc1a33fe1be06dd.gif"]]];
-    self._mSubheaderLabel.text = @"This is a video type of object.";
+    [self._mWebView loadRequest:[[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:@"http://www.spartzinc.com"]]];
+    self._mSubheaderLabel.text = @"This is a web view type of object.";
     
     return self;
 }

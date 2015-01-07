@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Factory Method to Create Cells-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -127,9 +127,9 @@
                                                         <rect key="frame" x="8" y="8" width="384" height="21"/>
                                                     </variation>
                                                 </label>
-                                                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Gy-GY-3UI">
+                                                <webView contentMode="scaleToFill" scalesPageToFit="YES" mediaPlaybackRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gy-GY-3UI">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="0.0" y="38" width="400" height="170"/>
@@ -167,9 +167,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="WBT-Yo-pz3"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="VDU-Kh-QYP"/>
@@ -177,18 +174,36 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wkp-ul-RmX" secondAttribute="trailing" id="0z5-wy-YYP"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wkp-ul-RmX" secondAttribute="bottom" id="KYx-RD-Hs8"/>
+                            <constraint firstItem="wkp-ul-RmX" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="nGb-Za-Nln"/>
+                            <constraint firstItem="wkp-ul-RmX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sxP-8G-p0b"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="wkp-ul-RmX"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0z5-wy-YYP"/>
+                                <exclude reference="nGb-Za-Nln"/>
+                                <exclude reference="sxP-8G-p0b"/>
+                                <exclude reference="KYx-RD-Hs8"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="wkp-ul-RmX"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="0z5-wy-YYP"/>
+                                <include reference="nGb-Za-Nln"/>
+                                <include reference="sxP-8G-p0b"/>
+                                <include reference="KYx-RD-Hs8"/>
+                            </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="paE-13-Uh6"/>
+                    <navigationItem key="navigationItem" title="Factory Method to Create Cells" id="paE-13-Uh6"/>
                     <connections>
                         <outlet property="mTableView" destination="wkp-ul-RmX" id="zTG-mA-WEa"/>
                     </connections>

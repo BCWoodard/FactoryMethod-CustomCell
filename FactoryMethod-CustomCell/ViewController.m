@@ -47,13 +47,13 @@
     
     switch (indexPath.row) {
         case 0:
-            cell = [[factory cellForKey:@"CustomCell0" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
-            break;
-        case 1:
             cell = [[factory cellForKey:@"CustomCell1" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;
-        case 2:
+        case 1:
             cell = [[factory cellForKey:@"CustomCell2" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
+            break;
+        case 2:
+            cell = [[factory cellForKey:@"CustomCell0" fromTableView:tableView forIndexPath:indexPath] initWithClassName];
             break;
         default:
             break;

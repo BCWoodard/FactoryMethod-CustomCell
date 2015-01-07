@@ -10,6 +10,7 @@
 
 @interface CustomCell : UITableViewCell
 
+// Would be converted to initWithCellType: withDictionary: or similar
 - (instancetype)initWithClassName;
 
 @end
